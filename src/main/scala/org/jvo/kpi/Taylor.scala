@@ -6,10 +6,10 @@ object Taylor {
     val x: Double = 0.3
 
     println(s"x = $x")
-    calculate(x)
+    calculateA(x)
   }
 
-  def calculate(x: Double): Double = {
+  def calculateA(x: Double): Double = {
     (1 to 4).toList
       .foldLeft(0.0)((z: Double, i: Int) => {
         println(s"n = $i")

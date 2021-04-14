@@ -6,14 +6,14 @@ object Taylor {
     val x: Double = 0.3
 
     println(s"x = $x")
-    calculate(x)
+    calculate(x, 4)
   }
 
-  def calculate(x: Double): Double = {
-    (1 to 4).toList
-      .foldLeft(0.0)((z: Double, i: Int) => {
-        println(s"n = $i")
-        val taylor = z + 1 / math.pow(1 + x, i)
+  def calculate(x: Double, taylorSeries: Int): Double = {
+    (1 to taylorSeries).toList
+      .foldLeft(0.0)((z: Double, series: Int) => {
+        println(s"n = $series")
+        val taylor = z + 1 / math.pow(1 + x, series)
         println(f"taylor = $taylor%1.5f")
         taylor
       })
